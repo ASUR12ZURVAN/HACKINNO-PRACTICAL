@@ -19,7 +19,7 @@ nav {
 }
 
 nav ul {
-    font-size:20px;
+    font-size:30px;
     padding:20px;
     list-style: none;
     display: flex;
@@ -28,15 +28,20 @@ nav ul {
 nav ul li {
  color: white;
     margin: 0 15px;
+    font-family: "Nerko One", cursive;
+        font-weight: 200;
+        font-style: normal;
 }
 
 nav ul li a {
     color: white;
     text-decoration:none;;
-    font-size: 20px;
+    font-size: 30px;
     padding:4px 4px 4px;
+        
+      
+      
 }
-
 
 .logo{
     margin:0;
@@ -48,10 +53,10 @@ nav ul li a {
     margin-bottom:10px;
 }
 .log:hover{
-    background-color:rgb(109, 109, 103);
-    color:black;
+    color:white;
     border-radius:3px;
     padding:2px;
+    text-decoration: underline 3px solid red;
 }
 .btn {
     background-color: #ff5722;
@@ -103,7 +108,7 @@ nav ul li a {
 }
 
 .btn-student:hover {
-    background-color: #0d4721;
+    background-color:rgb(222, 16, 23);
     border:border-box;
     border-color:white;
     transform: scale(1.05);
