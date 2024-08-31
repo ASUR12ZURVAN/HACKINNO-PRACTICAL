@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seller's Menu Management</title>
     <style>
-        /* Add some basic styling for better presentation */
         .container {
             max-width: 600px;
             margin: 0 auto;
@@ -14,25 +13,20 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
         h1, h2 {
             text-align: center;
         }
-
         form {
             display: flex;
             flex-direction: column;
         }
-
         label {
             margin-top: 10px;
         }
-
         input {
             padding: 8px;
             margin-top: 5px;
         }
-
         button {
             margin-top: 20px;
             padding: 10px;
@@ -42,16 +36,13 @@
             border-radius: 5px;
             cursor: pointer;
         }
-
         button:hover {
             background-color: #0056b3;
         }
-
         ul {
             list-style-type: none;
             padding: 0;
         }
-
         li {
             padding: 10px;
             background-color: #e2e2e2;
@@ -63,8 +54,6 @@
 <body>
     <div class="container">
         <h1>Menu Management</h1>
-
-        <!-- Form to add a new menu item -->
         <form id="menu-form">
             <label for="item-name">Item Name:</label>
             <input type="text" id="item-name" name="item-name" required>
@@ -77,54 +66,35 @@
 
             <button type="submit">Add Item</button>
         </form>
-
-        <!-- Confirm Button -->
         <button id="confirm-button">Confirm</button>
-
-        <!-- Section to display the menu -->
         <h2>Current Menu</h2>
         <ul id="menu-list">
-            <!-- Menu items will be added here -->
         </ul>
     </div>
 
     <script>
-        // Select form elements and buttons
         const menuForm = document.getElementById('menu-form');
         const confirmButton = document.getElementById('confirm-button');
         const menuList = document.getElementById('menu-list');
-
-        // Flag to check if the menu is confirmed
         let isConfirmed = false;
-
-        // Event listener to handle form submission
         menuForm.addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the form from submitting normally
-
-            // Check if the menu is already confirmed
             if (isConfirmed) {
                 alert('Menu is already confirmed. No more items can be added.');
                 return;
             }
-
-            // Get form values
             const itemName = document.getElementById('item-name').value;
             const itemPrice = document.getElementById('item-price').value;
             const prepTime = document.getElementById('prep-time').value;
-
-            // Create a new list item and add it to the menu list
             const listItem = document.createElement('li');
             listItem.textContent = `${itemName} - $${itemPrice} - ${prepTime} mins`;
             menuList.appendChild(listItem);
 
-            // Clear the form fields after adding the item
             menuForm.reset();
         });
-
-        // Event listener to handle confirmation
         confirmButton.addEventListener('click', function() {
             if (!isConfirmed) {
-                isConfirmed = true; // Set the flag to true to prevent further additions
+                isConfirmed = true; 
                 alert('Menu confirmed! No more items can be added.');
             } else {
                 alert('Menu is already confirmed.');
