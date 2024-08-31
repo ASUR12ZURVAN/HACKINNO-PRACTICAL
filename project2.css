@@ -1,17 +1,17 @@
-/* General Styles*/
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins',sans-serif;
-    background-color: aqua;
-    color:azure    
+    font-family:italian;
+    background-color:black;
+    color:azure;    
 }
 header nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    
     padding: 15px 20px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color:crimson  ;
     color: white;
 }
 
@@ -42,7 +42,7 @@ header ul li a:hover{
     color: #ffc107;
 }
 
-/*hero section*/
+
 .hero{
     position: relative;
     height: 100vh;
@@ -85,7 +85,7 @@ header ul li a:hover{
 
 .hero .btn {
     padding: 10px 20px;
-    background-color: #d9534f;
+    background-color:#FF5733 ;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -96,7 +96,7 @@ header ul li a:hover{
     background-color: #c9302c;
 }
 
-/* Restaurants Section */
+
 .restaurants {
     padding: 50px 20px;
     background-color: #fff;
@@ -106,7 +106,7 @@ header ul li a:hover{
 .restaurants h2 {
     font-size: 32px;
     margin-bottom: 40px;
-    color: #5bc0de;
+    color:#c9302c;
 }
 
 .restaurant-list {
@@ -127,6 +127,7 @@ header ul li a:hover{
 
 .restaurant img {
     width: 100%;
+    max-width:300px;
     border-radius: 10px;
 }
 
@@ -139,7 +140,7 @@ header ul li a:hover{
 .restaurant-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #5bc0de;
+    background-color:crimson;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -147,19 +148,10 @@ header ul li a:hover{
 }
 
 .restaurant-btn:hover {
-    background-color: #0275d8;
+    background-color:black;
 }
 
 .restaurant:hover {
     transform: translateY(-10px);
 }
 
-/* Footer */
-footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    font-size: 14px;
-}
