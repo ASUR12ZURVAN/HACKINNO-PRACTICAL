@@ -4,7 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior:smooth;
+}
 
 body {
     font-family: 'italian';
@@ -242,8 +244,12 @@ button:focus, .order-button:focus {
 
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 dishcol-md-4{
     size:25%;
+}
+. btn-primarymt-3{
+    background-color: #28a745;
+
 }
