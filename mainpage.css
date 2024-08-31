@@ -4,8 +4,9 @@ header{
     padding:20px;
 }
 body {
-    font-family: Arial, sans-serif;
+    font-family:italian;
     background: url('pic/sa.jpg') no-repeat center center fixed; 
+    font-weight: 3 ;
     background-size: cover; 
     
 }
@@ -18,19 +19,24 @@ nav {
 }
 
 nav ul {
+    font-size:20px;
+    padding:20px;
     list-style: none;
     display: flex;
 }
 
 nav ul li {
+ color: white;
     margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
-    text-decoration: none;
-    font-size: 16px;
+    text-decoration:none;;
+    font-size: 20px;
+    padding:4px 4px 4px;
 }
+
 
 .logo{
     margin:0;
@@ -40,6 +46,12 @@ nav ul li a {
     object-fit:cover;
     border-radius:10px;
     margin-bottom:10px;
+}
+.log:hover{
+    background-color:rgb(109, 109, 103);
+    color:black;
+    border-radius:3px;
+    padding:2px;
 }
 .btn {
     background-color: #ff5722;
@@ -57,18 +69,20 @@ nav ul li a {
 }
 
 .Order h1 {
-    font-size: 48px;
+    font-size: 50px;
     margin-bottom: 20px;
+    text-shadow: 4px 4px 6px #0c0c0c;
 }
 
 .Order p {
     font-size: 20px;
     margin-bottom: 30px;
+    font-weight:4px;
 }
 
 .order-buttons {
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     gap: 20px;
 }
 
@@ -82,18 +96,31 @@ nav ul li a {
 }
 
 .btn-student {
-    background-color: #4caf50; 
+    background-color: transparent; 
+    border:2px solid;
 }
 
 .btn-student:hover {
-    background-color: #45a049;
+    background-color: #0d4721;
     border:border-box;
+    border-color:white;
+    transform: scale(1.05);
+    border:1 px solid;
+    box-shadow: 0 5px 15px rgba(5, 21, 8, 0.3);
+    border-color:rgb(6, 26, 6);
 }
 
 .btn-shopper {
-    background-color: #4caf50; 
+    background-color:transparent; 
+    border:2px solid;
 }
 
 .btn-shopper:hover {
-    background-color: #4caf50; 
+    background-color: #0d4721; 
+    border:2px solid;
+    transform: scale(1.05);
+    border:border-box;
+    border-color:rgb(6, 26, 6);
+    border:1 px solid;
+    transform: scale(1.05);
 }
