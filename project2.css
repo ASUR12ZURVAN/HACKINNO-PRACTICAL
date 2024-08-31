@@ -73,6 +73,10 @@ header ul li a:hover{
     font-size: 48px;
     margin-bottom: 20px;
 }
+.hero-content h3{
+    font-size: 54px;
+    font-family: 'Lucida Sans';
+}
 
 .hero p {
     font-size: 20px;
