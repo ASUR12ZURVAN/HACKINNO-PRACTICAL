@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+  
     <header>
         <nav>
             <div class="logo">Foodie NITR</div>
@@ -19,8 +19,7 @@
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="login.html">Log In</a> / <a href="login.html">Sign Up</a></li>
-            </ul>
+                <li><a href="login.html">Log In</a> 
         </nav>
     </header>
 
@@ -29,21 +28,21 @@
         <p>Select your items and submit your order.</p>
         
         <div class="dishes row">
-            <div class="dish col-md-4">
+            <div class="dishcol-md-4">
                 <h3>CHICKEN BIRIYANI</h3>
-                <img src="img/download.jpg" alt="Chicken Biriyani" class="img-fluid">
+                <img src="pic/c (3).jpg" alt="Chicken Biriyani" class="img-fluid">
                 <p>Price: ₹150</p>
                 <button class="order-button" onclick="addItem('Chicken Biriyani', 150)">Add to Order</button>
             </div>
-            <div class="dish col-md-4">
+            <div class="dishcol-md-4">
                 <h3>CHEESE BURST PIZZA</h3>
-                <img src="img/3.jpg" alt="Cheese Burst Pizza" class="img-fluid">
+                <img src="pic/c (2).jpg" alt="Cheese Burst Pizza" class="img-fluid">
                 <p>Price: ₹190</p>
                 <button class="order-button" onclick="addItem('Cheese Burst Pizza', 190)">Add to Order</button>
             </div>
-            <div class="dish col-md-4">
+            <div class="dishcol-md-4">
                 <h3>COLD COFFEE</h3>
-                <img src="img/th.jpg" alt="Cold Coffee" class="img-fluid">
+                <img src="pic/c.jpg" alt="Cold Coffee" class="img-fluid">
                 <p>Price: ₹120</p>
                 <button class="order-button" onclick="addItem('Cold Coffee', 120)">Add to Order</button>
             </div>
@@ -52,7 +51,7 @@
         <div class="selected-items mt-4">
             <h2>Selected Items</h2>
             <ul id="selected-items" class="list-group">
-                <!-- Selected items will be added here -->
+               
             </ul>
             <p>Total Price: ₹<span id="total-price">0.00</span></p>
             <button hrefclass="btn btn-primary mt-3" onclick="submitOrder()"><a href="finalconfirm.html">Submit Order</a></button>
@@ -61,9 +60,7 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; All rights reserved.</p>
-    </footer>
+    
 
     <script>
         let selectedItems = [];
@@ -90,7 +87,7 @@
 
             localStorage.setItem('studentOrder', JSON.stringify(orderDetails));
 
-            // Redirect to shopper page
+            
             window.location.href = 'shopper.html';
         }
     </script>
