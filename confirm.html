@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopper Confirmation</title>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            background-color: #e2e2e2;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Shopper Confirmation</h1>
+        <h2>Ordered Items</h2>
+        <ul id="order-items"></ul>
+        <p>Total Price: ₹<span id="order-total-price">0.00</span></p>
+
+        <button onclick="confirmOrder()">Confirm</button>
+        <button onclick="denyOrder()">Deny</button>
+    </div>
+    <script>
+        function loadOrder() {
+            const orderDetailsString = localStorage.getItem('studentOrder');
+            if (orderDetailsString) {
+                const orderDetails = JSON.parse(orderDetailsString);
+
+                const itemList = document.getElementById('order-items');
+                orderDetails.items.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${item.name} - ₹${item.price.toFixed(2)}`;
+                    itemList.appendChild(listItem);
+                });
+                document.getElementById('order-total-price').textContent = orderDetails.totalPrice;
+            } else {
+                alert('No order found!');
+            }
+        }
+        function confirmOrder() {
+            alert('Order confirmed!');
+            localStorage.removeItem('studentOrder');
+        }
+
+        function denyOrder() {
+            alert('Order denied.');
+            localStorage.removeItem('studentOrder');
+        }
+        window.onload = loadOrder;
+    </script>
+</body>
+</html>
