@@ -28,7 +28,7 @@ html,body {
 		background-repeat: no-repeat;
 		background-position: left bottom;
 		background-size: 500px;
-		background-image: url('https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bf884ad570b50659c5fa2dc2cfb20ecf&auto=format&fit=crop&w=1000&q=100');
+		background-image: url('y/a.jpg');
 	}
 	
 	.signup {
@@ -107,10 +107,21 @@ html,body {
 				}
 			}
 		}
-		
+		.submit-btn {
+             /* Background color of the button */
+            color: #ffffff;            /* Text color of the button */
+            border: none;              /* Remove default border */
+            padding: 10px 20px;        /* Padding inside the button */
+            font-size: 16px;           /* Font size */
+            cursor: pointer;           /* Pointer cursor on hover */
+            border-radius: 5px;        /* Rounded corners */
+            transition: background-color 0.3s ease;
+        }
+        
+       
 		.submit-btn {
 			background-color: rgba(0,0,0,0.4);
-			color: rgba(256,256,256,0.7);
+			color: whitesmoke;
 			border:0;
 			border-radius: 15px;
 			display: block;
@@ -130,7 +141,7 @@ html,body {
 			}
 		}
 	}
-	
+   
 	.login {
 		position: absolute;
 		top: 20%;
