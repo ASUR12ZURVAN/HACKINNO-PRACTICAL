@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller's Menu Management</title>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input {
+            padding: 8px;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            background-color: #e2e2e2;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Menu Management</h1>
+        <form id="menu-form">
+            <label for="item-name">Item Name:</label>
+            <input type="text" id="item-name" name="item-name" required>
+
+            <label for="item-price">Price:</label>
+            <input type="number" id="item-price" name="item-price" step="0.01" required>
+
+            <label for="prep-time">Preparation Time (mins):</label>
+            <input type="number" id="prep-time" name="prep-time" required>
+
+            <button type="submit">Add Item</button>
+        </form>
+        <button id="confirm-button">Confirm</button>
+        <h2>Current Menu</h2>
+        <ul id="menu-list">
+        </ul>
+    </div>
+
+    <script>
+        const menuForm = document.getElementById('menu-form');
+        const confirmButton = document.getElementById('confirm-button');
+        const menuList = document.getElementById('menu-list');
+        let isConfirmed = false;
+        menuForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            if (isConfirmed) {
+                alert('Menu is already confirmed. No more items can be added.');
+                return;
+            }
+            const itemName = document.getElementById('item-name').value;
+            const itemPrice = document.getElementById('item-price').value;
+            const prepTime = document.getElementById('prep-time').value;
+            const listItem = document.createElement('li');
+            listItem.textContent = `${itemName} - $${itemPrice} - ${prepTime} mins`;
+            menuList.appendChild(listItem);
+
+            menuForm.reset();
+        });
+        confirmButton.addEventListener('click', function() {
+            if (!isConfirmed) {
+                isConfirmed = true; 
+                alert('Menu confirmed! No more items can be added.');
+            } else {
+                alert('Menu is already confirmed.');
+            }
+        });
+    </script>
+</body>
+</html>
