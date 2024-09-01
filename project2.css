@@ -3,7 +3,7 @@ html {
 }
 body {
     margin: 0;
-    padding: 0;
+    
     font-family:italian;
     background-color:black;
     color:azure;    
@@ -11,15 +11,16 @@ body {
 header nav {
     display: flex;
     justify-content: space-between;
-    
     padding: 15px 20px;
     background-color:crimson  ;
     color: white;
+    align-items:center;
 }
 
 header .logo {
     font-size: 40px;
     font-weight: bold;
+    margin-right:20px;
 }
 
 header ul {
@@ -31,6 +32,8 @@ header ul {
 
 header ul li {
     margin-left: 20px;
+    padding:4px 4px 4px;
+    justify-content:space-evenly;
 }
 
 header ul li a {
