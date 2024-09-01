@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SD JUICE CORNER</title>
-    <link rel="stylesheet" href="restaurant3.css">
+    <link rel="stylesheet" href="restaurant1.css">
 </head>
 <body>
     <!-- Navigation Bar -->
     <header>
         <nav>
-            <div class="logo">Foodies</div>
+            <div class="logo">CAMPUS EATS</div>
             <ul>
                 <li><a href="project.html">Home</a></li>
                 <li><a href="#">Menu</a></li>
@@ -21,36 +21,73 @@
     </header>
 
     <!-- Restaurant Content -->
-    <section class="restaurant-detail">
-        <h1>Spicy Thai</h1>
-        <p>Welcome to Spicy Thai! Taste the authentic flavors of Thailand.</p>
-        <h2>Our Menu</h2>
-        <div class="dishes">
-            <div class="dish">
+     <section class="featured-dishes container mt-5">
+        <h1>SD JUICE CORNER MENU</h1>
+        <p>Select your items and submit your order.</p>
+        
+        <div class="dishes row">
+            <div class="dishcol-md-4">
                 <h3>CHEESE MAGGI</h3>
-                <img src="img/download.jpg" alt="Spaghetti Carbonara">
-                <p>150</p>
-                <button class="order-button">Order Now</button>
+                <img src="pic\80161a59100fc7271a92ace5d0b0d5f0.jpg" alt="Cheese maggi" class="img-fluid">
+                <p>Price: ₹50</p>
+                <button class="order-button" onclick="addItem('Cheese maggi', 50)">Add to Order</button>
             </div>
-            <div class="dish">
+            <div class="dishcol-md-4">
                 <h3>BREAD OMLET</h3>
-                <img src="img/3.jpg" alt="Grilled Salmon">
-                <p>190</p>
-                <button class="order-button">Order Now</button>
+                <img src="pic\bread-omelette.webp" alt="Bread Omlet" class="img-fluid">
+                <p>Price: ₹40</p>
+                <button class="order-button" onclick="addItem('Bread Omlet', 40)">Add to Order</button>
             </div>
-            <div class="dish">
+            <div class="dishcol-md-4">
                 <h3>FRUIT SALAD</h3>
-                <img src="img/th.jpg" alt="Margherita Pizza">
-                <p>120</p>
-                <button class="order-button">Order Now</button>
+                <img src="pic\pasta-salad-horizontal-jpg-1522265695.jpg" alt="Fruit Salad" class="img-fluid">
+                <p>Price: ₹35</p>
+                <button class="order-button" onclick="addItem('Fruit Salad', 35)">Add to Order</button>
             </div>
         </div>
-        <!-- Add more content like images, offers, etc. -->
+        
+        <div class="selected-items mt-4">
+            <h2>Selected Items</h2>
+            <ul id="selected-items" class="list-group">
+               
+            </ul>
+            <p>Total Price: ₹<span id="total-price">0.00</span></p>
+            <button hrefclass="btn btn-primarymt-3" onclick="submitOrder()"><a href="finalconfirm.html">Submit Order</a></button>
+            
+
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Foodies. All rights reserved.</p>
-    </footer>
+    
+
+    <script>
+        let selectedItems = [];
+        let totalPrice = 0;
+
+        function addItem(name, price) {
+            selectedItems.push({name, price});
+            totalPrice += price;
+
+            const itemList = document.getElementById('selected-items');
+            const listItem = document.createElement('li');
+            listItem.className = 'list-group-item';
+            listItem.textContent = `${name} - ₹${price.toFixed(2)}`;
+            itemList.appendChild(listItem);
+
+            document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+        }
+
+        function submitOrder() {
+            const orderDetails = {
+                items: selectedItems,
+                totalPrice: totalPrice.toFixed(2)
+            };
+
+            localStorage.setItem('studentOrder', JSON.stringify(orderDetails));
+
+            
+            window.location.href = 'shopper.html';
+        }
+    </script>
 </body>
 </html>
