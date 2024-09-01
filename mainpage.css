@@ -18,14 +18,18 @@ body {
 nav {
     margin:0;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     background: rgba(0, 0, 0, 0.5);
 }
 
+
+
+
 nav ul {
+    
     font-size:30px;
-    padding:20px;
+    padding:30px;
     list-style: none;
     display: flex;
     background: rgba(0, 0, 0, 0.5)
@@ -48,8 +52,22 @@ nav ul li a {
       
       
 }
+.lo{font-family: "Nerko One", cursive;
+    font-weight: 200;
+    font-style: normal;
+   
+    width:300px;
 
-.logo{
+    margin:10;
+    color: white;
+    text-decoration:none;;
+    font-size: 30px;
+    padding:4px 4px 4px;
+        
+
+}
+
+.logo{ margin:0;
     margin:0;
     display:flex;
     height: 100px;
@@ -57,6 +75,7 @@ nav ul li a {
     object-fit:cover;
     border-radius:10px;
     margin-bottom:10px;
+    
 }
 .log:hover{
     color:white;
