@@ -3,7 +3,7 @@ html {
 }
 header{
     background-color:transparent;
-    padding:20px;
+   
     
     
 
@@ -20,7 +20,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.5):;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
@@ -157,8 +157,8 @@ nav ul li a {
 
 .carousel-caption {
     bottom: 20%;
-    animation: fade-in-out 5s ease-in-out infinite; /* Add animation */
-}
+    animation: fade-in-out 5s ease-in-out infinite; 
+    }
 
 
 @keyframes fade-in-out {
@@ -167,7 +167,10 @@ nav ul li a {
     80% { opacity: 1; }
     100% { opacity: 0; }
 }
-
+.carousel-control-prev{
+    background-color: rgba(0, 0, 0, 0.6);
+    
+}
 
 .carousel-caption h5 {
     font-size: 2.5rem; 
@@ -190,13 +193,13 @@ nav ul li a {
 }
 
   .parallax {
-    /* The image used */
+    
     background-image: url('pic/your-image.jpg');
   
-    /* Set a specific height */
+    
     min-height: 500px; 
   
-    /* Create the parallax scrolling effect */
+    
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
