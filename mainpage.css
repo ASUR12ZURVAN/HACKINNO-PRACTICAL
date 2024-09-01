@@ -131,3 +131,56 @@ nav ul li a {
     border:1 px solid;
     transform: scale(1.05);
 }
+/* Reduce the size of carousel images */
+/* Decrease the opacity of the carousel images */
+/* Reduce the size of carousel images and enclose them in a box */
+.carousel-inner {
+    width: 70%; /* Reduce overall carousel width */
+    margin: 0 auto; /* Center the carousel horizontally */
+    border: 2px solid #ccc; /* Add a border around the carousel */
+    border-radius: 15px; /* Round the corners of the carousel box */
+    overflow: hidden; /* Ensure content stays within the box */
+    background-color: #f8f8f8; /* Optional: Add a background color to the box */
+}
+
+.carousel-inner img {
+    width: 100%; /* Ensure images fit the width of the carousel */
+    height: auto;
+    opacity: 0.8; /* Decrease opacity of the images */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+}
+
+/* Animation for appearing and disappearing captions */
+.carousel-caption {
+    bottom: 20%;
+    animation: fade-in-out 5s ease-in-out infinite; /* Add animation */
+}
+
+/* Define the animation */
+@keyframes fade-in-out {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Style the headings with a background block */
+.carousel-caption h5 {
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    color: #fff; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 10px 20px; 
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Style the paragraph in the carousel */
+.carousel-caption p {
+    font-size: 1.2rem; 
+    color: #ddd; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 8px 16px; 
+    border-radius: 8px;
+    display: inline-block;
+}
